@@ -4,12 +4,34 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
+	<style>
+		.image-class {
+			margin-top: 100px;
+			height: 200px;
+			width: 700px;
+		}
+		.image-class2 {
+			margin-top: 100px;
+			height: 200px;
+			width: 100vw;
+		}
+		.image-container {
+			display: flex;
+			margin-top: 100px;
+			gap: 0; /* Ensure there is no gap between images */
+		}
+	</style>
 </head>
 <body>
 	<div>팀 슬로건</div>
 	<div>팀원 개인카드</div>
 	<div>들어갈 계시물</div>
 	<div>닉네임/응원의 메세지</div>
-	<div>깃허브 사진 커버및 링크</div>
+	<div> 깃허브 사진 커버및 링크 <br>
+		<div class="image-container">
+			<img src="img/footer.png" class="image-class" alt="footer image">
+			<img src="img/footer2.png" class="image-class2" alt="footer image">
+		</div>
+	</div>
 </body>
 </html>
