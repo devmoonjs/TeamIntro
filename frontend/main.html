@@ -50,7 +50,8 @@
 			/* Ensure there is no gap between images */
 		}
 
-		< !--팀 슬로건-->.card-mb-2 {
+		/* 팀 슬로건 */
+		.card-mb-2 {
 			width: 500px;
 			margin: 20px auto 20px auto;
 			padding: 20px 20px 20px 20px;
@@ -58,15 +59,16 @@
 			box-shadow: 0px 0px 3px 0px black;
 		}
 
-
-		< !--팀원 개인카드-->.card {
+		/* 팀원 개인카드 */
+		.card {
 			background-color: white;
 			border-radius: 5px;
 			border: 1px solid rgb(252, 77, 77);
 
 		}
 
-		< !--응원 한마디-->.mypostingbox {
+		/* 응원 한마디 */
+		.mypostingbox {
 			width: 500px;
 			margin: 20px auto 20px auto;
 			padding: 20px 20px 20px 20px;
@@ -74,19 +76,30 @@
 			box-shadow: 0px 0px 3px 0px black;
 		}
 
-		< !--응원의 메세지-->.card2 {
+		/* 응원의 메세지 */
+		.card2 {
 			background-color: white;
 			margin: 20px auto 20px auto;
 			border-radius: 5px;
 			border: 1px solid rgb(0, 0, 0);
 		}
 
-		< !--깃허브 링크-->.card3 {
+		/* 깃허브 링크 */
+		.card3 {
 			background-color: white;
 			margin: 20px auto 20px auto;
 			border-radius: 5px;
 			border: 1px solid rgb(0, 0, 0);
 		}
+
+		/* 게시판 부분 css */
+		.nickname {
+            width: 10%;
+        }
+        .cheering {
+            text-align: center;
+        }
+
 	</style>
 </head>
 
@@ -169,17 +182,28 @@
 
 	<!--응원의 메세지-->
 	<div class="card2">
-		<div class="card-header">
-			응원의 메세지
-		</div>
-		<div class="card-body">
-			<blockquote class="blockquote mb-0">
-				<p>""</p>
-				<footer class="blockquote-footer">"
-					<!--응원의 메세지 작성한 사용자의 닉네임-->" <cite title="Nick-name"></cite>
-				</footer>
-			</blockquote>
-		</div>
+		<table id="table" class="table">
+			<thead>
+				<tr>
+					<th class="nickname" scope="col">닉네임</th>
+					<th class="cheering" scope="col">응원하는 말</th>
+				</tr>
+			</thead>
+			<tbody id="add" class="table-group-divider">
+				<tr>
+					<td>Mark</td>
+					<td>@mdo</td>
+				</tr>
+				<tr>
+					<td>Jacob</td>
+					<td>@fat</td>
+				</tr>
+				<tr>
+					<td>Larry the Bird</td>
+					<td>@twitter</td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 
 	<!-- 상단은 성함작성하는 칸 하단은 메세지를 작성하는 칸 입니다.
