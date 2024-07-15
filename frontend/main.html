@@ -39,25 +39,43 @@
 	<script src="js/scroll.js"></script>
 
 	<style>
-		.image-class {
+		.footer-img {
+            width: 700px;
 			margin-top: 100px;
 			height: 200px;
-			width: 700px;
-		}
-
-		.image-class2 {
+            text-align: center;
+            background-image: url('img/footer.png'); /* Update with your local image path */
+            background-size: cover; /*이미지가 박스에 맞도록 하기*/
+			position: relative;
+        }
+		.footer-image-class {
 			margin-top: 100px;
 			height: 200px;
 			width: 100vw;
+			/* position: relative; */
 		}
-
-		.image-container {
+		.footer-image-container {
 			display: flex;
 			margin-top: 100px;
-			gap: 0;
-			/* Ensure there is no gap between images */
+			gap: 0; /* Ensure there is no gap between images */
+			position: relative;
 		}
-
+		.github-button {
+			position: absolute; /* Position the button absolutely within the .footer-image-class */
+			bottom: 60px; /* Distance from the bottom of the .footer-image-class */
+			left: 25%; /* Center horizontally within the .footer-image-class */
+			padding: 10px 20px;
+			font-size: 14px;
+			color: #D73E45;
+			background-color: #ffffff;
+			text-align: center;
+			text-decoration: none;
+			border-radius: 5px;
+		}
+		.github-button:hover {
+			background-color: #f3e0e1;
+		}
+		
 		/* 팀 슬로건 */
 		.card-mb-2 {
 			width: 500px;
@@ -102,10 +120,16 @@
 
 		/* 게시판 부분 css */
 		.nickname {
-			width: 10%;
-		}
-		.cheering {
-			text-align: center;
+            width: 10%;
+        }
+        .cheering {
+            text-align: center;
+        }
+		/* 가운데 정렬 css */
+		.wrap{
+			margin: auto;
+ 			width: 50%;
+  			padding: 10px;
 		}
 
 		/* 스크롤 버튼 css */
@@ -114,28 +138,22 @@
             bottom: 20px;
             right: 20px;
             padding: 15px 20px;
-            background: #007BFF;
             color: #fff;
             border: none;
             border-radius: 50px;
             cursor: pointer;
-            display: none;
+            display: none; /* 처음에는 숨김 */
         }
-        #scrollBtn:hover {
-            background: #0056b3;
-        } 
 	</style>
 </head>
 
 <body>
 
-	<div class="image-container">
-		<img src="img/footer.png" class="image-class" alt="footer image">
-		<img src="img/footer2.png" class="image-class2" alt="footer image">
-	</div>
-	</div>
+	
+	
 
 	<!--팀 슬로건-->
+	<div class="wrap">
 	<div class="card-mb-2" style="max-width: 540px;">
 		<div class="row g-0">
 			<div class="col-md-4">
@@ -246,16 +264,20 @@
 		</div>
 	</div>
 
-	<!--깃허브 링크 "btn btn-primary"를 실행시켰을때 깃허브 사이트로 이동하게 되야한다. -->
-	<div class="card3" style="width: 18rem;">
-		<img src="..." class="card-img-top" alt="...">
-		<div class="card-body">
-			<h5 class="card-title">팔팔한조 GitHub Link</h5>
-			<p class="card-text">팔팔한조의 깃허브 링크입니다!</p>
-			<a href="#" class="btn btn-primary">Link</a>
+	<!--깃허브 링크 및 커버사진 -->
+	<div> 
+		<div class="footer-image-container">
+			<div class="footer-img">
+			</div>
+			<img src="img/footer2.png" class="footer-image-class" alt="footer image">
+			<a href="https://github.com/devmoonjs/TeamIntro.git" class="github-button" target="_blank">팔팔한조 프로젝트 깃허브링크</a>
+
 		</div>
 	</div>
-	<button id="scrollBtn" class="rounded-circle bg-dark">▲</button>
+</div>
+<!-- 스크롤 버튼 -->
+<button id="scrollBtn" class="rounded-circle bg-dark">▲</button>
+
 </body>
 
 </html>
