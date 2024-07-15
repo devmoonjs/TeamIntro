@@ -70,18 +70,20 @@
 		
 		/* 팀 슬로건 */
 		.card-mb-2 {
-			width: 500px;
-			margin: 20px auto 20px auto;
+			width: 100%;
+			margin: 20px auto;
 			padding: 20px 20px 20px 20px;
-			border-radius: 5px;
-			box-shadow: 0px 0px 3px 0px black;
+			background-color: #ffe1e1;
+			border-radius: 0px;
+			box-shadow: 0px 0px 3px 0px rgb(255, 255, 255);
 		}
 
 		/* 팀원 개인카드 */
 		.card {
-			background-color: white;
+			background-color: #D73E45;
 			border-radius: 5px;
-			border: 1px solid rgb(252, 77, 77);
+			border: 1px solid rgb(255, 255, 255);
+			color: white;
 
 		}
 
@@ -120,8 +122,18 @@
 		/* 가운데 정렬 css */
 		.wrap{
 			margin: auto;
+ 			width: 80%;
+  			padding: 10px;
+		}
+		.wrap2{
+			margin: auto;
  			width: 50%;
   			padding: 10px;
+		}
+		.header{
+			margin: 100px auto;
+ 			width: 80%;
+  			padding: 0px;
 		}
 	</style>
 </head>
@@ -132,27 +144,30 @@
 	
 
 	<!--팀 슬로건-->
-	<div class="wrap">
-	<div class="card-mb-2" style="max-width: 540px;">
+	<div class="card-mb-2" style="max-width: 100%;">
 		<div class="row g-0">
-			<div class="col-md-4">
-				<img src="..." class="img-fluid rounded-start" alt="...">
-			</div>
 			<div class="col-md-8">
+				<div class="header">
 				<div class="card-body">
-					<h5 class="card-title">팔팔한조 슬로건</h5>
-					<p class="card-text">""</p>
+					<h1 class="card-title">팔팔한조</h1>
+					<p class="card-text">"슬로건"</p>
 					<p class="card-text"><small class="text-body-secondary">"이 또한 지나가리.."</small></p>
 				</div>
+			</div>
+		</div>
+			<div class="col-md-4">
+				<img src="https://github.com/devmoonjs/TeamIntro/blob/main/frontend/img/file.png?raw=true" class="img-fluid rounded-start" alt="..." width="70%">	
+	
 			</div>
 		</div>
 	</div>
 
 	<!--팀원 개인카드-->
-	<div class="row row-cols-1 row-cols-md-3 g-4">
+	<div class="wrap">
+	<div class="row row-cols-1 row-cols-md-5 g-4">
 		<div class="col">
 			<div class="card">
-				<img src="..." class="card-img-top" alt="...">
+				<img src="https://newsimg.hankookilbo.com/cms/articlerelease/2021/02/17/98feb898-f8b7-49b2-b998-c9a4c7114704.jpg" class="card-img-top" alt="...">
 				<div class="card-body">
 					<h5 class="card-title">문정석</h5>
 					<p class="card-text">MBTI : ENFJ</p>
@@ -162,7 +177,7 @@
 		</div>
 		<div class="col">
 			<div class="card">
-				<img src="..." class="card-img-top" alt="...">
+				<img src="https://newsimg.hankookilbo.com/cms/articlerelease/2021/02/17/98feb898-f8b7-49b2-b998-c9a4c7114704.jpg" class="card-img-top" alt="...">
 				<div class="card-body">
 					<h5 class="card-title">김현</h5>
 					<p class="card-text">MBTI : ISFJ</p>
@@ -172,7 +187,7 @@
 		</div>
 		<div class="col">
 			<div class="card">
-				<img src="..." class="card-img-top" alt="...">
+				<img src="https://newsimg.hankookilbo.com/cms/articlerelease/2021/02/17/98feb898-f8b7-49b2-b998-c9a4c7114704.jpg" class="card-img-top" alt="...">
 				<div class="card-body">
 					<h5 class="card-title">길용진</h5>
 					<p class="card-text">MBIT : ISTP</p>
@@ -182,7 +197,7 @@
 		</div>
 		<div class="col">
 			<div class="card">
-				<img src="..." class="card-img-top" alt="...">
+				<img src="https://newsimg.hankookilbo.com/cms/articlerelease/2021/02/17/98feb898-f8b7-49b2-b998-c9a4c7114704.jpg" class="card-img-top" alt="...">
 				<div class="card-body">
 					<h5 class="card-title">김성주</h5>
 					<p class="card-text">각오! : 화이팅!</p>
@@ -191,7 +206,7 @@
 		</div>
 		<div class="col">
 			<div class="card">
-				<img src="..." class="card-img-top" alt="...">
+				<img src="https://newsimg.hankookilbo.com/cms/articlerelease/2021/02/17/98feb898-f8b7-49b2-b998-c9a4c7114704.jpg" class="card-img-top" alt="...">
 				<div class="card-body">
 					<h5 class="card-title">김민주</h5>
 					<p class="card-text">MBIT : ENTJ</p>
@@ -200,8 +215,9 @@
 			</div>
 		</div>
 	</div>
-
+</div>
 	<!--응원의 메세지-->
+	<div class="wrap2">
 	<div class="card2">
 		<table id="table" class="table">
 			<thead>
@@ -242,7 +258,7 @@
 			<button id="postingbtn" type="button" class="btn btn-dark">등록</button>
 		</div>
 	</div>
-
+</div>
 	<!--깃허브 링크 및 커버사진 -->
 	<div> 
 		<div class="footer-image-container">
@@ -253,7 +269,6 @@
 
 		</div>
 	</div>
-</div>
 
 
 </body>
