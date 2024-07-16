@@ -1,5 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gowun+Dodum&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gowun+Batang&family=Gowun+Dodum&display=swap');
 
+.black-han-sans-regular {
+    font-family: "Black Han Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
 
+.gowun-dodum-regular {
+    font-family: "Gowun Dodum", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .gowun-batang-regular {
+    font-family: "Gowun Batang", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
 .footer-box {
     width: 100vw;
     margin-top: 100px;
@@ -71,6 +91,7 @@
     background-color: #D73E45;
     border-radius: 0px;
     box-shadow: 0px 0px 3px 0px rgb(255, 255, 255);
+    color: white;
 }
 
 /* 팀원 개인카드 */
@@ -79,6 +100,7 @@
     border-radius: 5px;
     border: 1px solid rgb(255, 255, 255);
     color: white;
+    font-family: 'Gowun Dodum'!important;
 }
 
 .card:hover {
