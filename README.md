@@ -1,9 +1,7 @@
 # 팀 소개 웹 페이지
 <img src = https://github.com/devmoonjs/TeamIntro/blob/ffe62ea21db9f7cf64af3ab6031200248a8eab5e/frontend/img/footer.png>
 
-## 팀명 : 팔팔한조
-
-### 프로젝트 소개
+## 프로젝트 소개
 각 팀원들을 한명씩 소개하는 웹페이지입니다. 소개 양식은 개인사진과 함께 다음과 같은 정보를 포함합니다.
 
 - 이름
@@ -16,16 +14,13 @@
 - 자신의 협업 스타일 소개
 - 본인 블로그 주소
 
-#### 프로젝트 컬러
-`#D73E45`
-
-### 사용 기술
+## 사용 기술
 - HTML
 - JavaScript
 - CSS
 - Firebase
 
-### 팀 소개
+## 팀 소개
 - **우리 팀만의 특징과 추구하는 궁극적인 목표**
     - 협업과 창의성을 바탕으로, 최고의 웹 개발팀이 되는 것을 목표로 하고 있습니다. 끊임없이 배우고 성장하며, 새로운 도전에 도전하는 것을 두려워하지 않습니다.
 
@@ -58,7 +53,4 @@
     - 개인 소개 페이지 제작
 
 ---
-
----
-
 <img src = https://github.com/devmoonjs/TeamIntro/blob/ffe62ea21db9f7cf64af3ab6031200248a8eab5e/frontend/img/footer.png>
