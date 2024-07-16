@@ -41,7 +41,6 @@
 			let name = $('#name').val();
 			let message = $('#message').val();
 
-<<<<<<< Updated upstream
 			/* name과 message가 null값에 업로드되는 현상을 막았습니다*/
 			if(!name && !message){
 				alert('닉네임과 응원메시지는 필수 입력 항목입니다!');
@@ -56,17 +55,6 @@
             alert('저장 완료');
             window.location.reload();
         });
-=======
-			let doc = {
-				'name': name,
-				'message': message,
-				'timestamp': serverTimestamp() // 시간 저장
-			};
-			await addDoc(collection(db, "board"), doc);
-			alert('저장 완료');
-			window.location.reload();
-		});
->>>>>>> Stashed changes
 
 		// 저장된 게시물 불러오기
 		let q = query(collection(db, "board"), orderBy("timestamp", "desc"));
