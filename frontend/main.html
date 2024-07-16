@@ -81,7 +81,7 @@
 		.footer-img {
 			width: 700px;
 			margin-top: 100px;
-			height: 200px;
+			height: 250px;
 			text-align: center;
 			background-image: url('img/footer.png');
 			/* Update with your local image path */
@@ -90,11 +90,12 @@
 			position: relative;
 		}
 
-		.footer-image-class {
-			margin-top: 100px;
-			height: 200px;
+		.footer-box {
 			width: 100vw;
-			/* position: relative; */
+			margin-top: 100px;
+			height: 250px;
+			text-align: center;
+			background-color: #D73E45;
 		}
 
 		.footer-image-container {
@@ -108,12 +109,12 @@
 		.github-button {
 			position: absolute;
 			/* Position the button absolutely within the .footer-image-class */
-			bottom: 60px;
+			bottom: 100px;
 			/* Distance from the bottom of the .footer-image-class */
-			left: 25%;
+			left: 435px;
 			/* Center horizontally within the .footer-image-class */
 			padding: 10px 20px;
-			font-size: 14px;
+			font-size: 15px;
 			color: #D73E45;
 			background-color: #ffffff;
 			text-align: center;
@@ -123,6 +124,31 @@
 
 		.github-button:hover {
 			background-color: #f3e0e1;
+		}
+
+		.paragraph-container {
+			margin-left: 100px;
+			margin-top: 40px;
+			display: flex;
+			flex-direction: row;
+		}
+
+		.footer-paragraph {
+			margin-left: 50px;
+		}
+
+		.line-container {
+			color: #fff;
+			display: flex;
+			flex-direction: column;
+			text-decoration: none;
+		}
+
+		.line-container-heading {
+			color: #fff;
+			display: flex;
+			flex-direction: column;
+			font-weight: bold;
 		}
 
 		/* 팀 슬로건 */
@@ -333,12 +359,34 @@
 	<!--깃허브 링크 및 커버사진 -->
 	<div>
 		<div class="footer-image-container">
-			<div class="footer-img">
+			<div class="footer-img">	
 			</div>
-			<img src="img/footer2.png" class="footer-image-class" alt="footer image">
-			<a href="https://github.com/devmoonjs/TeamIntro.git" class="github-button" target="_blank">팔팔한조 프로젝트
-				깃허브링크</a>
-
+			<div class="footer-box">
+				<div class="paragraph-container">
+					<p class="footer-paragraph">
+						<a class="line-container-heading">INFORMATION</a> <br>
+						<a class="line-container">상호명 : (주)팔팔한조</a>
+						<a class="line-container">대표자명 : 문정석 김현 길용진 김성주 김민주</a>
+						<a class="line-container">주소 : 서울특별시 강남구 압구정로 88길 88</a>
+						<a class="line-container">대표전화 : 1688-1688</a>
+					</p>
+					<p class="footer-paragraph">
+						<a class="line-container-heading">LICENCE</a>
+						<a class="line-container">사업자등록번호 : 652-94-38472</a>
+						<br>
+						<a class="line-container-heading">WEB MASTER</a>
+						<a class="line-container">e-mail : admin@palpal.com</a>
+						<a class="line-container">개인정보 보호책임자 : 문정석 김현 길용진 김성주 김민주</a>
+					</p>
+				</div>
+			
+				
+			</div>
+			<a href="https://github.com/devmoonjs/TeamIntro.git" class="github-button" target="_blank">
+				<svg xmlns="http://www.w3.org/2000/svg" width="6" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+					<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+				</svg> Link to project
+			</a>
 		</div>
 	</div>
 
