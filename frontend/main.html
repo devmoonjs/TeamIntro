@@ -41,6 +41,11 @@
             let name = $('#name').val();
             let message = $('#message').val();
 
+			/* name과 message가 null값에 업로드되는 현상을 막았습니다*/
+			if(!name && !message){
+				alert('닉네임과 응원메시지는 필수 입력 항목입니다!');
+				return;
+			}
             let doc = {
                 'name': name,
                 'message': message,
