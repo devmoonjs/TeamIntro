@@ -176,6 +176,11 @@
 			color: white;
 		}
 
+		.card:hover {
+			filter: opacity(0.65);
+			cursor: pointer;
+		}
+
 		/* 응원 한마디 */
 		.mypostingbox {
 			width: 800px;
@@ -256,7 +261,7 @@
 
 		.wrap2 {
 			margin: auto;
-			width: 50%;
+			width: 80%;
 			padding: 10px;
 		}
 
@@ -305,10 +310,66 @@
 			</div>
 		</div>
 	</div>
-
-	<!--팀원 개인카드-->
-	<!--응원의 메세지-->
 	<div class="wrap2">
+		<!--팀원 개인카드-->
+		<div class="row row-cols-1 row-cols-md-5 g-4">
+			<!--팀원 개인카드 1-->
+			<div class="col">
+				<div class="card" data-bs-toggle="modal" data-bs-target="#teamModal1">
+					<img src="./img/1.png" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">문정석</h5>
+						<p class="card-text">MBTI : ENFJ</p>
+						<p class="card-text">각오! : 백엔드 새싹</p>
+					</div>
+				</div>
+			</div>
+			<!--팀원 개인카드 2-->
+			<div class="col">
+				<div class="card" data-bs-toggle="modal" data-bs-target="#teamModal2">
+					<img src="./img/2.png" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">김현</h5>
+						<p class="card-text">MBTI : ISFJ</p>
+						<p class="card-text">각오! : 좋은 개발자가 목표!</p>
+					</div>
+				</div>
+			</div>
+			<!--팀원 개인카드 3-->
+			<div class="col">
+				<div class="card" data-bs-toggle="modal" data-bs-target="#teamModal3">
+					<img src="./img/3.png" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">길용진</h5>
+						<p class="card-text">MBTI : ISTP</p>
+						<p class="card-text">각오! : 내가 10년만 젊었어도...</p>
+					</div>
+				</div>
+			</div>
+			<!--팀원 개인카드 4-->
+			<div class="col">
+				<div class="card" data-bs-toggle="modal" data-bs-target="#teamModal4">
+					<img src="./img/4.png" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">김성주</h5>
+						<p class="card-text">MBTI : ENTJ</p>
+						<p class="card-text">각오! : 화이팅!</p>
+					</div>
+				</div>
+			</div>
+			<!--팀원 개인카드 5-->
+			<div class="col">
+				<div class="card" data-bs-toggle="modal" data-bs-target="#teamModal5">
+					<img src="./img/5.png" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">김민주</h5>
+						<p class="card-text">MBTI : ENTJ</p>
+						<p class="card-text">각오! : 악으로!깡으로!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--응원의 메세지-->
 		<div class="card2">
 			<table id="table" class="table">
 				<thead>
@@ -323,63 +384,6 @@
 		</div>
 		<!-- 문정석 정보 -->
 		<div class="container">
-			<div class="row row-cols-1 row-cols-md-5 g-4">
-				<!--팀원 개인카드 1-->
-				<div class="col">
-					<div class="card" data-bs-toggle="modal" data-bs-target="#teamModal1">
-						<img src="./img/1.png" class="card-img-top" alt="...">
-						<div class="card-body">
-							<h5 class="card-title">문정석</h5>
-							<p class="card-text">MBTI : ENFJ</p>
-							<p class="card-text">각오! : 백엔드 새싹</p>
-						</div>
-					</div>
-				</div>
-				<!--팀원 개인카드 2-->
-				<div class="col">
-					<div class="card" data-bs-toggle="modal" data-bs-target="#teamModal2">
-						<img src="./img/2.png" class="card-img-top" alt="...">
-						<div class="card-body">
-							<h5 class="card-title">김현</h5>
-							<p class="card-text">MBTI : ISFJ</p>
-							<p class="card-text">각오! : 좋은 개발자가 목표!</p>
-						</div>
-					</div>
-				</div>
-				<!--팀원 개인카드 3-->
-				<div class="col">
-					<div class="card" data-bs-toggle="modal" data-bs-target="#teamModal3">
-						<img src="./img/3.png" class="card-img-top" alt="...">
-						<div class="card-body">
-							<h5 class="card-title">길용진</h5>
-							<p class="card-text">MBTI : ISTP</p>
-							<p class="card-text">각오! : 내가 10년만 젊었어도...</p>
-						</div>
-					</div>
-				</div>
-				<!--팀원 개인카드 4-->
-				<div class="col">
-					<div class="card" data-bs-toggle="modal" data-bs-target="#teamModal4">
-						<img src="./img/4.png" class="card-img-top" alt="...">
-						<div class="card-body">
-							<h5 class="card-title">김성주</h5>
-							<p class="card-text">MBTI : ENTJ</p>
-							<p class="card-text">각오! : 화이팅!</p>
-						</div>
-					</div>
-				</div>
-				<!--팀원 개인카드 5-->
-				<div class="col">
-					<div class="card" data-bs-toggle="modal" data-bs-target="#teamModal5">
-						<img src="./img/5.png" class="card-img-top" alt="...">
-						<div class="card-body">
-							<h5 class="card-title">김민주</h5>
-							<p class="card-text">MBTI : ENTJ</p>
-							<p class="card-text">각오! : 악으로!깡으로!</p>
-						</div>
-					</div>
-				</div>
-			</div>
 		</div>
 
 		<!-- Modal 1 -->
