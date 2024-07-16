@@ -17,8 +17,8 @@
 		// Firebase SDK 라이브러리 가져오기
 		import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
 		import { getFirestore } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
-		import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
-		import { getDocs } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+		import { collection, addDoc, serverTimestamp} from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+		import { getDocs, query, orderBy } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
 
 		// Firebase 구성 정보 설정
 		const firebaseConfig = {
@@ -44,6 +44,7 @@
             let doc = {
                 'name': name,
                 'message': message,
+				'timestamp' : serverTimestamp() // 시간 저장
             };
             await addDoc(collection(db, "board"), doc);
             alert('저장 완료');
@@ -51,7 +52,8 @@
         });
 
 		// 저장된 게시물 불러오기
-        let docs = await getDocs(collection(db, "board"));
+		let q = query(collection(db, "board"), orderBy("timestamp", "desc"));
+        let docs = await getDocs(q);
         docs.forEach((doc) => {
             let row = doc.data();
             let name = row['name'];
