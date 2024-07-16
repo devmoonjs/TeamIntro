@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+	<title>team-slogan</title>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+	<!-- 스크롤 js -->
+	<script src="js/scroll.js"></script>
+
+	<style>
+		.footer-img {
+			width: 700px;
+			margin-top: 100px;
+			height: 200px;
+			text-align: center;
+			background-image: url('img/footer.png');
+			/* Update with your local image path */
+			background-size: cover;
+			/*이미지가 박스에 맞도록 하기*/
+			position: relative;
+		}
+
+		.footer-image-class {
+			margin-top: 100px;
+			height: 200px;
+			width: 100vw;
+			/* position: relative; */
+		}
+
+		.footer-image-container {
+			display: flex;
+			margin-top: 100px;
+			gap: 0;
+			/* Ensure there is no gap between images */
+			position: relative;
+		}
+
+		.github-button {
+			position: absolute;
+			/* Position the button absolutely within the .footer-image-class */
+			bottom: 60px;
+			/* Distance from the bottom of the .footer-image-class */
+			left: 25%;
+			/* Center horizontally within the .footer-image-class */
+			padding: 10px 20px;
+			font-size: 14px;
+			color: #D73E45;
+			background-color: #ffffff;
+			text-align: center;
+			text-decoration: none;
+			border-radius: 5px;
+		}
+
+		.github-button:hover {
+			background-color: #f3e0e1;
+		}
+
+		/* 팀 슬로건 */
+		.card-mb-2 {
+			width: 100%;
+			height: 410px;
+			margin: 0px 0px 20px auto;
+			padding: auto 300px 20px;
+			padding-left: 150px;
+			background-color: #ffe1e1;
+			border-radius: 0px;
+			box-shadow: 0px 0px 3px 0px rgb(255, 255, 255);
+		}
+
+		/* 나의 한마디 */
+		.card {
+			background-color: #D73E45;
+            margin-bottom: 0px;
+			border-radius: 5px;
+			border: 1px solid rgb(255, 255, 255);
+			color: white;
+
+		}
+
+        .card2 {
+			background-color: #ffffff;
+			border-radius: 5px;
+			border: 1px solid rgb(255, 255, 255);
+			color: rgb(28, 28, 28);
+
+		}
+
+		/* 깃허브 링크 */
+		.card3 {
+			background-color: white;
+			margin: 20px auto 20px auto;
+			border-radius: 5px;
+			border: 1px solid rgb(0, 0, 0);
+		}
+
+		/* 게시판 부분 css */
+		.nickname {
+			width: 10%;
+		}
+
+		.cheering {
+			text-align: center;
+		}
+
+		/* 가운데 정렬 css */
+		.wrap {
+			margin: auto;
+			width: 80%;
+			padding: 10px;
+		}
+
+		.wrap2 {
+			margin: auto;
+			width: 50%;
+			padding: 10px;
+		}
+
+		.header {
+			margin: 100px auto;
+			width: 80%;
+			padding: 0px;
+		}
+
+		/* 스크롤 버튼 css */
+		#scrollBtn {
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			padding: 15px 20px;
+			color: #fff;
+			border: none;
+			border-radius: 50px;
+			cursor: pointer;
+			display: none;
+			/* 처음에는 숨김 */
+		}
+	</style>
+</head>
+
+<body>
+	<!--개인 슬로건-->
+	<div class="card-mb-2" style="max-width: 100%;">
+		<div class="row g-0">
+			<div class="col-md-6">
+				<div class="header">
+					<div class="card-body">
+						<h1>길 용 진<h1>
+						<h3>Back-End Developer</h3>
+						<h5 class="card-text">나 이</h5>
+                        <h6 class="card-text">35</h6>
+                        <h5 class="card-text">개발에 대한 동기/목표</h5>
+                        <h6 class="card-text">솰라솰라</h6>
+                        <h5 class="card-text">슬로건/좌우명</h5>
+                        <h6 class="card-text">솰라솰라</h6>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<img src="img/3.jpeg" class="img-fluid rounded-start" alt="..." style="width:100%;">
+
+			</div>
+		</div>
+	</div>
+
+	<!--팀원 개인카드-->
+	<div class="wrap">
+		<div class="row row-cols-1 row-cols-md-2 g-4">
+			<div class="col">
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">저의 장점이에요</h5>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">저는 이렇게 일해요</h5>
+					</div>
+				</div>
+			</div>
+            <div class="col">
+				<div class="card2">
+					<div class="card-body">
+						<p class="card-text">그럭저럭 잘하는거 같은데요?</p>
+					</div>
+				</div>
+			</div>
+            <div class="col">
+				<div class="card2">
+					<div class="card-body">
+						<p class="card-text">그럭저럭 잘하는거 같은데요?</p>
+					</div>
+				</div>
+			</div>
+					</div>
+				</div>
+
+	<!--깃허브 링크 및 커버사진 -->
+	<div>
+		<div class="footer-image-container">
+			<div class="footer-img">
+			</div>
+			<img src="img/footer2.png" class="footer-image-class" alt="footer image">
+			<a href="https://github.com/devmoonjs/TeamIntro.git" class="github-button" target="_blank">팔팔한조 프로젝트
+				깃허브링크</a>
+
+		</div>
+	</div>
+
+	<!-- 스크롤 버튼 -->
+	<button id="scrollBtn" class="rounded-circle bg-dark">▲</button>
+</body>
+
+</html>
