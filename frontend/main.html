@@ -42,19 +42,19 @@
 			let message = $('#message').val();
 
 			/* name과 message가 null값에 업로드되는 현상을 막았습니다*/
-			if(!name && !message){
+			if (!name && !message) {
 				alert('닉네임과 응원메시지는 필수 입력 항목입니다!');
 				return;
 			}
-            let doc = {
-                'name': name,
-                'message': message,
-				'timestamp' : serverTimestamp() // 시간 저장
-            };
-            await addDoc(collection(db, "board"), doc);
-            alert('저장 완료');
-            window.location.reload();
-        });
+			let doc = {
+				'name': name,
+				'message': message,
+				'timestamp': serverTimestamp() // 시간 저장
+			};
+			await addDoc(collection(db, "board"), doc);
+			alert('저장 완료');
+			window.location.reload();
+		});
 
 		// 저장된 게시물 불러오기
 		let q = query(collection(db, "board"), orderBy("timestamp", "desc"));
@@ -163,7 +163,7 @@
 			margin: 0px 0px 20px auto;
 			padding: auto 200px 20px;
 			padding-left: 150px;
-			background-color: #ffe1e1;
+			background-color: #D73E45;
 			border-radius: 0px;
 			box-shadow: 0px 0px 3px 0px rgb(255, 255, 255);
 		}
@@ -198,7 +198,7 @@
 			border-radius: 5px;
 			border: 1px solid rgb(0, 0, 0);
 			height: 200px;
-            overflow-y: scroll;
+			overflow-y: scroll;
 		}
 
 		/* 깃허브 링크 */
@@ -225,7 +225,7 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			border-radius: 20px;
+			border-radius: 50px;
 			border: 5px solid white;
 		}
 
@@ -403,13 +403,13 @@
 										<h6 class="card-subtitle mb-2 text-muted">MBTI: ENFJ</h6>
 										<h4 class="card-role">Back-End Developer</h4>
 										<div class="social-icons">
-											<a href="https://github.com/username1" target="_blank"><i
+											<a href="https://github.com/devmoonjs" target="_blank"><i
 													class="fab fa-github"></i></a>
 											<a href="https://www.instagram.com/username1" target="_blank"><i
 													class="fab fa-instagram"></i></a>
 											<a href="mailto:username1@gmail.com" target="_blank"><i
 													class="fas fa-envelope"></i></a>
-											<a href="https://www.naver.com" target="_blank"><i
+											<a href="https://velog.io/@moonjs1018/posts" target="_blank"><i
 													class="fa-solid fa-square-poll-horizontal"></i></a>
 										</div>
 										<br>
@@ -423,8 +423,7 @@
 										</div>
 									</div>
 									<div class="col-md-4 d-flex justify-content-end align-items-start">
-										<div class="photo"><img
-												src="./img/1.png" alt="">
+										<div class="photo"><img src="./img/1.png" alt="">
 										</div>
 									</div>
 								</div>
@@ -467,7 +466,7 @@
 										<br>
 										<div>
 											<p><strong>취미:</strong> 게임</p>
-											<p><strong>개발 동기:</strong> 개발을 그냥 할 줄 아는 개발자가 아닌, 
+											<p><strong>개발 동기:</strong> 개발을 그냥 할 줄 아는 개발자가 아닌,
 												좋은 개발자로 성장하고 싶습니다.</p>
 											<p><strong>슬로건/좌우명:</strong> 내 선택에 후회를 하지 말자</p>
 											<p><strong>장점:</strong> 깊은 집중력, 깊은 이해를 위한 지식의 호기심</p>
@@ -475,8 +474,7 @@
 										</div>
 									</div>
 									<div class="col-md-4 d-flex justify-content-end align-items-start">
-										<div class="photo"><img
-												src="./img/2.png" alt="">
+										<div class="photo"><img src="./img/2.png" alt="">
 										</div>
 									</div>
 								</div>
@@ -527,8 +525,7 @@
 										</div>
 									</div>
 									<div class="col-md-4 d-flex justify-content-end align-items-start">
-										<div class="photo"><img
-												src="./img/3.png" alt="">
+										<div class="photo"><img src="./img/3.png" alt="">
 										</div>
 									</div>
 								</div>
@@ -578,8 +575,7 @@
 										</div>
 									</div>
 									<div class="col-md-4 d-flex justify-content-end align-items-start">
-										<div class="photo"><img
-												src="./img/4.png" alt="">
+										<div class="photo"><img src="./img/4.png" alt="">
 										</div>
 									</div>
 								</div>
@@ -629,8 +625,7 @@
 										</div>
 									</div>
 									<div class="col-md-4 d-flex justify-content-end align-items-start">
-										<div class="photo"><img
-												src="./img/5.png" alt="">
+										<div class="photo"><img src="./img/5.png" alt="">
 										</div>
 									</div>
 								</div>
