@@ -97,7 +97,7 @@
 
 /* 팀원 개인카드 */
 .card {
-    background-color: #D73E45;
+    background-color: white;
     border-radius: 5px;
     border: 1px solid rgb(255, 255, 255);
     color: white;
@@ -168,7 +168,7 @@
 }
 
 .team-card .social-icons a:hover {
-    color: #D73E45;
+    color: white;
 }
 
 /* 게시판 부분 css */
