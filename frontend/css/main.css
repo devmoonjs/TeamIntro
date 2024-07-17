@@ -2,19 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gowun+Dodum&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gowun+Batang&family=Gowun+Dodum&display=swap');
 
-.black-han-sans-regular {
+.black-han-sans-regular { /*팀 제목 폰트*/
     font-family: "Black Han Sans", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
-.gowun-dodum-regular {
+.gowun-dodum-regular { /*슬로건 폰트*/
     font-family: "Gowun Dodum", sans-serif;
     font-weight: 400;
     font-style: normal;
   }
   
-  .gowun-batang-regular {
+  .gowun-batang-regular { /*팀 카드 폰트*/
     font-family: "Gowun Batang", serif;
     font-weight: 400;
     font-style: normal;
