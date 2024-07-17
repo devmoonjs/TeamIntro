@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gowun+Dodum&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gowun+Batang&family=Gowun+Dodum&display=swap');
 
+
 .black-han-sans-regular { /*팀 제목 폰트*/
     font-family: "Black Han Sans", sans-serif;
     font-weight: 400;
@@ -21,23 +22,49 @@
     font-style: normal;
   }
   
-.footer-box {
-    width: 100vw;
-    margin-top: 100px;
+  /* 푸터에서 뛰는 이미지를 불러오는 css */
+  .footer-img {
+    /* 사이즈*/
+    width: 700px;
     height: 250px;
-    text-align: center;
+    /* 이미지 가져오기 */
+    background-image: url('../img/footer.png');
+    /* 이미지가 지정 사이즈를 채우도록 함 */
+    background-size: cover;
+}
+
+.footer-box {
+    /* 사이즈, 'vw' 는 'view width'로 현재 보이는 만큼을 채울때 쓰는 단위 */
+    width: 100vw;
+    height: 250px;
+    /* 글씨 왼쪽으로 정렬 */
+    text-align: left;
     background-color: #D73E45;
 }
 
 .footer-image-container {
+    /* 플렉스 박스 디스플레이로 두 요소 양옆으로 정렬 */
     display: flex;
-    margin-top: 100px;
+    /* 풋터의 이미지와 박스 사이 갭이없도록 조절 */
     gap: 0;
-    /* Ensure there is no gap between images */
     position: relative;
 }
 
+.link-holder {
+    /* 깃헙링그의 가장 바깟요소의 테두리를 둥글게 만듬 */
+    border-radius: 13px;
+    /* 테두리색 */
+    border-color: rgb(235, 171, 171);
+}
 
+.btn {
+    /* 버튼 누를때 생기는 테두리 없애기 */
+    border: none;
+}
+
+.link-holder:hover {
+    background-color: #f3e0e1;
+}
 
 .paragraph-container {
     margin-left: 100px;
@@ -66,7 +93,6 @@
 
 /* 팀 슬로건 */
 .card-mb-2 {
-    color:white;
     width: 100%;
     height: 350px;
     margin: 0px 0px 20px auto;
@@ -75,20 +101,24 @@
     background-color: #D73E45;
     border-radius: 0px;
     box-shadow: 0px 0px 3px 0px rgb(255, 255, 255);
-    color: white;
 }
 
 /* 팀원 개인카드 */
 .card {
-    background-color: white;
+    background-color: #D73E45;
     border-radius: 5px;
     border: 1px solid rgb(255, 255, 255);
     color: white;
-    font-family: 'Gowun Dodum'!important;
+    font-weight: 500;
+    /*폰트 굵기 추가*/
+    font-family: 'Gowun Dodum' !important;
+    /*폰트 추가*/
 }
 
 .card:hover {
+    /* 카보드 마우스 지날때 투명도 65% */
     filter: opacity(0.65);
+    /* 마우스 지날때 손포인터 모양으로 변함 */
     cursor: pointer;
 }
 
@@ -108,8 +138,10 @@
     margin: 20px auto 20px auto;
     border-radius: 5px;
     border: 1px solid rgb(0, 0, 0);
-    height: 200px;
+    height: 300px;
+    /*세로 길이 지정*/
     overflow-y: scroll;
+    /*해당 클래스 요소에 세로 방향 스크롤 기능 활성화*/
 }
 
 /* 깃허브 링크 */
@@ -129,6 +161,9 @@
     padding: 20px;
     box-sizing: border-box;
     margin: 0;
+    font-family: 'Gowun Dodum' !important;
+    /*폰트 추가*/
+
 }
 
 /* 팝업 모달 */
@@ -136,7 +171,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 50px;
+    border-radius: 20px;
     border: 5px solid white;
 }
 
@@ -151,7 +186,7 @@
 }
 
 .team-card .social-icons a:hover {
-    color: white;
+    color: #D73E45;
 }
 
 /* 게시판 부분 css */
@@ -170,12 +205,7 @@
     padding: 10px;
 }
 
-.wrap2 {
-    margin: auto;
-    width: 80%;
-    padding: 10px;
-}
-
+/* 슬로건 전용 정렬 css */
 .header {
     margin: 100px auto;
     width: 80%;
@@ -193,5 +223,11 @@
     border-radius: 50px;
     cursor: pointer;
     display: none;
-    /* 처음에는 숨김 */
+    /* 이 중 필수 요소는
+        position: fixed; - 요소를 고정 위치에 배치, 스크롤을 해도 버튼이 항상 화면의 같은 위에 존재한다.
+        bottom: 20px; - 화면 하단으로 부터 20px 떨어진 위치에 배치
+        right: 20px; - 오른쪽 화면으로 부터 20px 떨어진 위치에 배치
+        cursor: pointer; - 요소 위에 마우스를 올렸을 때 커서 모양을 손가락 모양으로 변경
+        display: none; - 요소를 처음에는 화면에 안보이도록 숨긴다.
+    */
 }
