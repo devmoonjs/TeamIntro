@@ -58,9 +58,9 @@
 			let message = $('#message').val(); // maessage아이디 요소 안에 있는 값을 변수에 저장
 
 			/* name과 message가 null값에 업로드되는 현상을 막았습니다*/
-			if (!name && !message) {
+			 if (!name && !message) {  // name,message 둘다 입력되어야만 doc값으로 저장된다.
 				alert('닉네임과 응원메시지는 필수 입력 항목입니다!');
-				return;
+				return; // name, message둘다 입력없을시 리턴
 			}
 			let doc = { // Firestore에 저장할 문서 객체를 생성
 				'name': name, // name 컬럼의 name값을 설정
@@ -229,7 +229,7 @@
 			border: 1px solid rgb(0, 0, 0);
 		}
 
-
+		/*팀 카드*/
 		.team-card {
 			border-radius: 20px;
 			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);

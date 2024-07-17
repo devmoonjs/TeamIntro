@@ -1,3 +1,4 @@
+/*구글 폰트 api*/
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gowun+Dodum&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gowun+Batang&family=Gowun+Dodum&display=swap');
@@ -137,7 +138,7 @@
     border: 1px solid rgb(0, 0, 0);
 }
 
-
+/*팀 카드*/
 .team-card {
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
