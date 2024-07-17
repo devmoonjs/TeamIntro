@@ -328,7 +328,7 @@
 				</div>
 			</div>
 			<div class="col-md-4">
-				<img src="https://github.com/devmoonjs/TeamIntro/blob/main/frontend/img/file.png?raw=true"
+				<img src="./img/file.png"
 					class="img-fluid rounded-start" alt="...">
 
 			</div>
@@ -339,6 +339,7 @@
 		<div class="row row-cols-1 row-cols-md-5 g-4">
 			<!--팀원 개인카드 1-->
 			<div class="col">
+				<!-- data-bs-toggle : 부트스트랩 속성 / 클릭 시 data-bs-target id 와 동일 한 팝업이 열림 -->
 				<div class="card" data-bs-toggle="modal" data-bs-target="#teamModal1">
 					<img src="./img/1.png" class="card-img-top" alt="...">
 					<div class="card-body">
@@ -415,17 +416,22 @@
 			<div class="modal-dialog modal-lg">
 				<div class="modal-content">
 					<div class="modal-header">
+						<!-- 모달 제목 -->
 						<h5 class="modal-title" id="teamModalLabel1">문정석 정보</h5>
+						<!-- 닫기 버튼 -->
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
+					<!-- 모달 내용 부분 -->
 					<div class="modal-body">
 						<div class="team-card">
 							<div class="card-body">
 								<div class="row">
+									<!-- 왼쪽 열 -->
 									<div class="col-md-8">
 										<h1 class="card-title">문정석</h1>
 										<h6 class="card-subtitle mb-2 text-muted">MBTI: ENFJ</h6>
 										<h4 class="card-role">Back-End Developer</h4>
+										<!-- 소셜 아이콘 -->
 										<div class="social-icons">
 											<a href="https://github.com/username1" target="_blank"><i
 													class="fab fa-github"></i></a>
@@ -446,7 +452,9 @@
 											<p><strong>협업 스타일:</strong> 열린 소통, 적극적 참여</p>
 										</div>
 									</div>
+									<!-- 오른쪽 열 -->
 									<div class="col-md-4 d-flex justify-content-end align-items-start">
+										<!-- 팀원 사진 -->
 										<div class="photo"><img src="./img/1.png" alt="">
 										</div>
 									</div>
@@ -454,6 +462,7 @@
 							</div>
 						</div>
 					</div>
+					<!-- 모달 footer -->
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
 					</div>
