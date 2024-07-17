@@ -127,23 +127,16 @@
 			position: relative;
 		}
 
-		.github-button {
-			position: absolute;
-			/* Position the button absolutely within the .footer-image-class */
-			bottom: 100px;
-			/* Distance from the bottom of the .footer-image-class */
-			left: 435px;
-			/* Center horizontally within the .footer-image-class */
-			padding: 10px 20px;
-			font-size: 15px;
-			color: #D73E45;
-			background-color: #ffffff;
-			text-align: center;
-			text-decoration: none;
-			border-radius: 5px;
+		.link-holder {
+			border-radius: 13px;
+			border-color: rgb(235, 171, 171);
 		}
 
-		.github-button:hover {
+		.btn {
+			border: none;
+		}
+
+		.link-holder:hover {
 			background-color: #f3e0e1;
 		}
 
@@ -324,6 +317,12 @@
 					<div class="card-body">
 						<h3 class="card-text"><span style="font-size: 40px; font-family: 'Gowun Dodum' !important; font-weight: bolder; color:rgb(255, 255, 255);">88하게 개발을 8low</span></h3>
 						<h1 class="card-title" style="line-height: 1;"><span style="font-size: 100px; font-family: 'Black Han Sans' !important; color: rgb(255, 255, 255);">팔팔한조</span></h1>
+						<button class="link-holder">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="bi bi-github" viewBox="0 0 16 16">
+                                <path fill="#D73E45" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                            </svg>
+                            <a href="https://github.com/devmoonjs/TeamIntro" class="btn" target="_blank">Link to GitHub</a>
+                        </button>
 					</div>
 				</div>
 			</div>
@@ -577,7 +576,7 @@
 			<div class="modal-dialog modal-lg">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title" id="teamModalLabel4">김성주 정보</h5>
+						<h5 class="modal-title" id="teamModalLabel4">김성주</h5>
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
 					<div class="modal-body">
@@ -587,24 +586,22 @@
 									<div class="col-md-8">
 										<h1 class="card-title">김성주</h1>
 										<h6 class="card-subtitle mb-2 text-muted">MBTI: ENTJ</h6>
-										<h4 class="card-role">EX Developer</h4>
+										<h4 class="card-role">Future Developer</h4>
 										<div class="social-icons">
-											<a href="https://github.com/username4" target="_blank"><i
+											<a href="https://github.com/sjkimplus" target="_blank"><i
 													class="fab fa-github"></i></a>
-											<a href="https://www.instagram.com/username4" target="_blank"><i
+											<a href="https://www.instagram.com/sungju_kim_0909/" target="_blank"><i
 													class="fab fa-instagram"></i></a>
-											<a href="mailto:username4@gmail.com" target="_blank"><i
-													class="fas fa-envelope"></i></a>
-											<a href="https://www.naver.com" target="_blank"><i
+											<a href="https://velog.io/@sjkimplus09/posts" target="_blank"><i
 													class="fa-solid fa-square-poll-horizontal"></i></a>
 										</div>
 										<br>
 										<div>
-											<p><strong>취미:</strong> 가나다라마바사</p>
-											<p><strong>개발 동기:</strong> 가나다라마바사</p>
-											<p><strong>슬로건/좌우명:</strong> 가나다라마바사</p>
-											<p><strong>장점:</strong> 가나다라마바사</p>
-											<p><strong>협업 스타일:</strong> 가나다라마바사</p>
+											<p><strong>취미:</strong> 배드민턴</p>
+											<p><strong>개발 동기:</strong> 대학에서 처음들은 파이썬 수업으로 코딩에 입문하게 되었고 무언가를 직접만들고 테스트하는 작업에 매료되어, 개발자로 취업을 전양하게 되었어요! 코딩은 다른 과목들과 달리 이론보단 실기를 위주로 배울수 있어서 좋았어요!</p>
+											<p><strong>슬로건/좌우명:</strong> There is no path to happiness, happiness is the path.</p>
+											<p><strong>장점:</strong> 소통을 원활히 자주 하고 시간약속을 잘 지킵니다.</p>
+											<p><strong>협업 스타일:</strong> 치밀히 계획을 짜고 계획 이탈시 자주 소통하는 것을 좋아합니다!</p>
 										</div>
 									</div>
 									<div class="col-md-4 d-flex justify-content-end align-items-start">
@@ -697,8 +694,6 @@
 <!--깃허브 링크 및 커버사진 -->
 <div>
 	<div class="footer-image-container">
-		<div class="footer-img">
-		</div>
 		<div class="footer-box">
 			<div class="paragraph-container">
 				<p class="footer-paragraph">
@@ -717,16 +712,9 @@
 					<a class="line-container">개인정보 보호책임자 : 문정석 김현 길용진 김성주 김민주</a>
 				</p>
 			</div>
-
-
 		</div>
-		<a href="https://github.com/devmoonjs/TeamIntro.git" class="github-button" target="_blank">
-			<svg xmlns="http://www.w3.org/2000/svg" width="6" height="16" fill="currentColor" class="bi bi-github"
-				viewBox="0 0 16 16">
-				<path
-					d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
-			</svg> Link to project
-		</a>
+		<div class="footer-img">
+		</div>
 	</div>
 </div>
 

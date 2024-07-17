@@ -37,25 +37,7 @@
     position: relative;
 }
 
-.github-button {
-    position: absolute;
-    /* Position the button absolutely within the .footer-image-class */
-    bottom: 100px;
-    /* Distance from the bottom of the .footer-image-class */
-    left: 435px;
-    /* Center horizontally within the .footer-image-class */
-    padding: 10px 20px;
-    font-size: 15px;
-    color: #D73E45;
-    background-color: #ffffff;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-}
 
-.github-button:hover {
-    background-color: #f3e0e1;
-}
 
 .paragraph-container {
     margin-left: 100px;
