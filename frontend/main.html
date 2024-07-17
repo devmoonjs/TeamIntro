@@ -37,40 +37,40 @@
 		const db = getFirestore(app);
 
 		// 데이터 전송
-		$("#postingbtn").click(async function () {
-			let name = $('#name').val();
-			let message = $('#message').val();
+		$("#postingbtn").click(async function () { // postingbtn 아이디를 가진 요소가 클릭 이벤트가 발생했을때 함수를 실행
+			let name = $('#name').val();	// name아이디 요소 안에 있는 값을 변수에 저장
+			let message = $('#message').val(); // maessage아이디 요소 안에 있는 값을 변수에 저장
 
 			/* name과 message가 null값에 업로드되는 현상을 막았습니다*/
-			if(!name && !message){
+			if (!name && !message) {
 				alert('닉네임과 응원메시지는 필수 입력 항목입니다!');
 				return;
 			}
-            let doc = {
-                'name': name,
-                'message': message,
-				'timestamp' : serverTimestamp() // 시간 저장
-            };
-            await addDoc(collection(db, "board"), doc);
-            alert('저장 완료');
-            window.location.reload();
-        });
+			let doc = { // Firestore에 저장할 문서 객체를 생성
+				'name': name, // name 컬럼의 name값을 설정
+				'message': message, // maessage 컬럼의 maessage 데이터 값을 설정
+				'timestamp': serverTimestamp() // 시간 저장
+			};
+			await addDoc(collection(db, "board"), doc); // Firestore의 board 컬렉션에 doc객체를 추가, await 의해 이 작업이 완료될 때까지 대기 
+			alert('저장 완료');
+			window.location.reload(); // 새로고침
+		});
 
 		// 저장된 게시물 불러오기
-		let q = query(collection(db, "board"), orderBy("timestamp", "desc"));
-		let docs = await getDocs(q);
-		docs.forEach((doc) => {
-			let row = doc.data();
-			let name = row['name'];
-			let message = row['message'];
+		let q = query(collection(db, "board"), orderBy("timestamp", "desc")); // 데이터 베이스 db에서 board 컬렉션 참조, 해당 컬럼기준 내림차순으로 정렬하는 쿼리 생성
+		let docs = await getDocs(q); // 쿼리 q를 실행해서 조건에 맞는 문서를 가져옴
+		docs.forEach((doc) => { // 반복 작업 시작, doc 각 문서를 나타냄
+			let row = doc.data(); // 문서 데이터를 객체 형태로 가져옴
+			let name = row['name']; // 데이터객체 name 필드값 가져오기
+			let message = row['message']; // 데이터 객체 message 필드값 가져오기
 
-			let temp_html = `
+			let temp_html = ` 
             <tr>
                 <td>${name}</td>
                 <td>${message}</td>
-            </tr>`;
+            </tr>`; // html 태그를 생성해서 데이터를 넣고 싶은 곳에 name, message 값을 넣는다
 
-			$('#add').append(temp_html);
+			$('#add').append(temp_html); // 생성한 html 태그 값과 데이터를 add 요소에 삽입한다
 		});
 	</script>
 
@@ -79,7 +79,7 @@
 	<title>team-slogan</title>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-	<!-- 스크롤 js -->
+	<!-- 스크롤 js 파일 연결 -->
 	<script src="js/scroll.js"></script>
 
 	<style>
@@ -198,7 +198,9 @@
 			border-radius: 5px;
 			border: 1px solid rgb(0, 0, 0);
 			height: 200px;
-            overflow-y: scroll;
+			/*세로 길이 지정*/
+			overflow-y: scroll;
+			/*해당 클래스 요소에 세로 방향 스크롤 기능 활성화*/
 		}
 
 		/* 깃허브 링크 */
@@ -282,7 +284,13 @@
 			border-radius: 50px;
 			cursor: pointer;
 			display: none;
-			/* 처음에는 숨김 */
+			/* 이 중 필수 요소는
+				position: fixed; - 요소를 고정 위치에 배치, 스크롤을 해도 버튼이 항상 화면의 같은 위에 존재한다.
+				bottom: 20px; - 화면 하단으로 부터 20px 떨어진 위치에 배치
+				right: 20px; - 오른쪽 화면으로 부터 20px 떨어진 위치에 배치
+				cursor: pointer; - 요소 위에 마우스를 올렸을 때 커서 모양을 손가락 모양으로 변경
+				display: none; - 요소를 처음에는 화면에 안보이도록 숨긴다.
+			*/
 		}
 	</style>
 </head>
@@ -423,8 +431,7 @@
 										</div>
 									</div>
 									<div class="col-md-4 d-flex justify-content-end align-items-start">
-										<div class="photo"><img
-												src="./img/1.png" alt="">
+										<div class="photo"><img src="./img/1.png" alt="">
 										</div>
 									</div>
 								</div>
@@ -467,7 +474,7 @@
 										<br>
 										<div>
 											<p><strong>취미:</strong> 게임</p>
-											<p><strong>개발 동기:</strong> 개발을 그냥 할 줄 아는 개발자가 아닌, 
+											<p><strong>개발 동기:</strong> 개발을 그냥 할 줄 아는 개발자가 아닌,
 												좋은 개발자로 성장하고 싶습니다.</p>
 											<p><strong>슬로건/좌우명:</strong> 내 선택에 후회를 하지 말자</p>
 											<p><strong>장점:</strong> 깊은 집중력, 깊은 이해를 위한 지식의 호기심</p>
@@ -475,8 +482,7 @@
 										</div>
 									</div>
 									<div class="col-md-4 d-flex justify-content-end align-items-start">
-										<div class="photo"><img
-												src="./img/2.png" alt="">
+										<div class="photo"><img src="./img/2.png" alt="">
 										</div>
 									</div>
 								</div>
@@ -527,8 +533,7 @@
 										</div>
 									</div>
 									<div class="col-md-4 d-flex justify-content-end align-items-start">
-										<div class="photo"><img
-												src="./img/3.png" alt="">
+										<div class="photo"><img src="./img/3.png" alt="">
 										</div>
 									</div>
 								</div>
@@ -578,8 +583,7 @@
 										</div>
 									</div>
 									<div class="col-md-4 d-flex justify-content-end align-items-start">
-										<div class="photo"><img
-												src="./img/4.png" alt="">
+										<div class="photo"><img src="./img/4.png" alt="">
 										</div>
 									</div>
 								</div>
@@ -629,8 +633,7 @@
 										</div>
 									</div>
 									<div class="col-md-4 d-flex justify-content-end align-items-start">
-										<div class="photo"><img
-												src="./img/5.png" alt="">
+										<div class="photo"><img src="./img/5.png" alt="">
 										</div>
 									</div>
 								</div>
